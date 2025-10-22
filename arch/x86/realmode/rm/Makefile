@@ -50,7 +50,7 @@ targets += realmode.lds
 $(obj)/realmode.lds: $(obj)/pasyms.h
 
 LDFLAGS_realmode.elf := -m elf_i386 --emit-relocs -T
-CPPFLAGS_realmode.lds += -P -C -I$(objtree)/$(obj)
+CPPFLAGS_realmode.lds += -P -C -I$(objtree)/$(obj) -std=gnu11
 
 targets += realmode.elf
 $(obj)/realmode.elf: $(obj)/realmode.lds $(REALMODE_OBJS) FORCE
@@ -77,3 +77,5 @@ KBUILD_AFLAGS	:= $(KBUILD_CFLAGS) -D__ASSEMBLY__
 KBUILD_CFLAGS	+= -fno-asynchronous-unwind-tables
 GCOV_PROFILE := n
 UBSAN_SANITIZE := n
+
+KBUILD_CFLAGS	+= -std=gnu11

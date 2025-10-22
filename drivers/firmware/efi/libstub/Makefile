@@ -35,7 +35,7 @@ KBUILD_CFLAGS			:= $(cflags-y) -Os -DDISABLE_BRANCH_PROFILING \
 				   -ffreestanding \
 				   -fno-stack-protector \
 				   $(call cc-option,-fno-addrsig) \
-				   -D__DISABLE_EXPORTS
+				   -D__DISABLE_EXPORTS -std=gnu11
 
 #
 # struct randomization only makes sense for Linux internal types, which the EFI
