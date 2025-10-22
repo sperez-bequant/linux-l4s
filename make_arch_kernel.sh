@@ -16,6 +16,15 @@ scripts/config -m NET_SCH_DUALPI2
 scripts/config -m TCP_CONG_DCTCP
 scripts/config -m TCP_CONG_BBR2
 
+
+./scripts/config --enable CONFIG_FB
+./scripts/config --enable CONFIG_FB_SIMPLE
+./scripts/config --enable CONFIG_FRAMEBUFFER_CONSOLE
+./scripts/config --enable CONFIG_VT
+./scripts/config --enable CONFIG_VT_CONSOLE
+./scripts/config --enable CONFIG_DUMMY_CONSOLE
+
+
 make -s kernelrelease >version
 
 make -j"$(nproc)" bzImage && make -j"$(nproc)" modules
