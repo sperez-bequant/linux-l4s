@@ -23,7 +23,7 @@ scripts/config -m TCP_CONG_BBR2
 ./scripts/config --enable CONFIG_VT
 ./scripts/config --enable CONFIG_VT_CONSOLE
 ./scripts/config --enable CONFIG_DUMMY_CONSOLE
-
+./scripts/config --enable CONFIG_DRM_VBOXVIDEO
 
 make -s kernelrelease >version
 
