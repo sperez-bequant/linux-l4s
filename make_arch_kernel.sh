@@ -24,6 +24,8 @@ scripts/config -m TCP_CONG_BBR2
 ./scripts/config --enable CONFIG_VT_CONSOLE
 ./scripts/config --enable CONFIG_DUMMY_CONSOLE
 ./scripts/config --enable CONFIG_DRM_VBOXVIDEO
+./scripts/config --enable CONFIG_DRM_VMWGFX
+./scripts/config --enable CONFIG_DRM_VMWGFX_FBCON
 
 make -s kernelrelease >version
 
